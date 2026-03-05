@@ -8,6 +8,8 @@
 
 :root {
   --accent: #3b82f6;
+  --accent2: #a78bfa;
+  --accent3: #f59e0b;
 
   --bg: #0b0f14;
   --panel: #0f1720;
@@ -134,6 +136,14 @@ section {
 .prompt {
   color: var(--muted);
   white-space: nowrap;
+}
+
+.prompt .host {
+  color: color-mix(in oklab, var(--accent2), var(--muted) 40%);
+}
+
+.prompt .path {
+  color: color-mix(in oklab, var(--accent3), var(--muted) 55%);
 }
 
 .caret {
@@ -283,6 +293,23 @@ p {
   border-radius: var(--radius);
   background: var(--panel);
   padding: 14px 14px;
+  position: relative;
+}
+
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, color-mix(in oklab, var(--accent2), transparent 92%), transparent 24%),
+    repeating-linear-gradient(180deg, transparent 0 24px, color-mix(in oklab, var(--border), transparent 88%) 24px 25px);
+  opacity: 0.6;
+}
+
+.panel > * {
+  position: relative;
 }
 
 .term {
@@ -373,6 +400,69 @@ li {
   border: 1px solid var(--border);
   border-radius: 6px;
   color: var(--muted);
+}
+
+.tag.featured {
+  border-color: color-mix(in oklab, var(--accent2), var(--border) 70%);
+  color: color-mix(in oklab, var(--accent2), var(--muted) 35%);
+}
+
+.tag.warm {
+  border-color: color-mix(in oklab, var(--accent3), var(--border) 70%);
+  color: color-mix(in oklab, var(--accent3), var(--muted) 35%);
+}
+
+/* Blog */
+.post-list {
+  margin-top: 10px;
+}
+
+.post {
+  padding: 14px 0;
+}
+
+.post + .post {
+  border-top: 1px solid var(--border);
+}
+
+.post-meta {
+  font-family: var(--mono);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.post-title {
+  margin: 6px 0 0;
+  font-family: var(--mono);
+  font-size: 1.05rem;
+}
+
+.post-title a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.post-title a:hover {
+  border-bottom-color: var(--accent);
+}
+
+.post-body h1,
+.post-body h2,
+.post-body h3 {
+  margin-top: 1.2rem;
+}
+
+.post-body pre {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel);
+  padding: 12px;
+  overflow: auto;
+}
+
+.post-body code {
+  font-family: var(--mono);
 }
 
 .flags {

@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "slug": "measuring-encoder-jitter",
+      "title": "Measuring encoder jitter without guessing",
+      "date": "2026-02-22",
+      "summary": "A small instrumentation pattern for capturing latency and jitter in interrupt-driven encoder decoding.",
+      "tags": ["embedded", "instrumentation", "debugging"]
+    },
+    {
+      "slug": "perf-stat-baseline",
+      "title": "perf stat: a baseline I reuse",
+      "date": "2026-01-17",
+      "summary": "How I keep performance measurements comparable: counters, warmups, and sanity checks.",
+      "tags": ["systems", "perf", "measurement"]
+    }
+  ]
+}
+

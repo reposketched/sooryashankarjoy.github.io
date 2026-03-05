@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Blog — Sooryashankar Joy</title>
+    <meta name="description" content="Blog posts by Sooryashankar Joy (Soorya): embedded systems, circuits, performance, and debugging notes." />
+    <link rel="canonical" href="https://sooryashankarjoy.github.io/blog.html" />
+
+    <meta property="og:title" content="Blog — Sooryashankar Joy" />
+    <meta property="og:description" content="Short posts on embedded systems, circuits, performance, and debugging." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sooryashankarjoy.github.io/blog.html" />
+    <meta property="og:image" content="https://sooryashankarjoy.github.io/assets/og-image.svg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Blog — Sooryashankar Joy" />
+    <meta name="twitter:description" content="Short posts on embedded systems, circuits, performance, and debugging." />
+    <meta name="twitter:image" content="https://sooryashankarjoy.github.io/assets/og-image.svg" />
+
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container">
+        <div class="header-bar">
+          <div class="prompt" aria-label="Prompt">
+            <span class="host">sj@purdue</span>:<span class="path">~/blog</span>$<span class="caret" aria-hidden="true">▍</span>
+          </div>
+
+          <div style="display: inline-flex; align-items: center; gap: 10px">
+            <nav class="nav" aria-label="Primary">
+              <a data-nav="true" href="./">Home</a>
+              <a data-nav="true" href="./projects.html">Projects</a>
+              <a data-nav="true" href="./teaching.html">Teaching</a>
+              <a data-nav="true" href="./notes.html">Notes</a>
+              <a data-nav="true" href="./blog.html">Blog</a>
+              <a data-nav="true" href="./about.html">About</a>
+              <a data-nav="true" href="./contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions" aria-label="Header controls">
+              <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme">theme</button>
+              <button id="menuToggle" class="icon-btn hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                menu
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu" aria-label="Mobile navigation">
+          <a data-nav="true" href="./">Home</a>
+          <a data-nav="true" href="./projects.html">Projects</a>
+          <a data-nav="true" href="./teaching.html">Teaching</a>
+          <a data-nav="true" href="./notes.html">Notes</a>
+          <a data-nav="true" href="./blog.html">Blog</a>
+          <a data-nav="true" href="./about.html">About</a>
+          <a data-nav="true" href="./contact.html">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="container">
+        <section aria-label="Blog header">
+          <h1 class="mono">Blog</h1>
+          <p class="muted">Posts are stored as Markdown files under <code>blog/posts/</code>.</p>
+
+          <div class="panel" aria-label="Blog command">
+            <pre class="term"><span class="promptline">sj@purdue:~/blog$</span> ls posts/
+<span class="muted">(auto-generated from blog/posts.json)</span></pre>
+          </div>
+        </section>
+
+        <hr class="rule" />
+
+        <section aria-label="Post list">
+          <div id="blogIndex" class="post-list" aria-live="polite">
+            <p class="muted">Loading…</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© <span id="year"></span> Sooryashankar Joy</span>
+        <span class="muted">Blog</span>
+      </div>
+    </footer>
+
+    <script defer src="./assets/main.js"></script>
+  </body>
+</html>
+
