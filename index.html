@@ -3,13 +3,36 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="color-scheme" content="light dark" />
+    <title>Sooryashankar Joy — Embedded Systems & Systems Programming</title>
+    <meta
+      name="description"
+      content="Sooryashankar Joy is a Computer Science student at Purdue University focused on embedded systems, systems programming, and hardware–software interfaces."
+    />
+    <meta
+      name="keywords"
+      content="Sooryashankar Joy, Purdue University, Embedded Systems, Systems Programming, C, Microcontrollers, Firmware, Hardware-Software Interface, Circuit Design, Digital Logic, Performance Optimization, Debugging, Instrumentation, Oscilloscope, Teaching Assistant, Electrical Engineering Lab"
+    />
 
-    <title>Soorya Shankar Joy</title>
-    <meta name="description" content="Personal website — coming online." />
+    <link rel="canonical" href="https://sooryashankarjoy.github.io/" />
+    <meta property="og:title" content="Sooryashankar Joy — Embedded Systems & Systems Programming" />
+    <meta
+      property="og:description"
+      content="Embedded systems, systems programming, and hardware–software interfaces — projects, teaching, and contact."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sooryashankarjoy.github.io/" />
+    <meta property="og:image" content="https://sooryashankarjoy.github.io/assets/og-image.svg" />
 
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%93%8C%3C/text%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sooryashankar Joy — Embedded Systems & Systems Programming" />
+    <meta
+      name="twitter:description"
+      content="Embedded systems, systems programming, and hardware–software interfaces — projects, teaching, and contact."
+    />
+    <meta name="twitter:image" content="https://sooryashankarjoy.github.io/assets/og-image.svg" />
+
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/styles.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -18,104 +41,167 @@
       <div class="container header-inner">
         <a class="brand" href="./" aria-label="Home">
           <span class="brand-mark" aria-hidden="true">SJ</span>
-          <span class="brand-text">Soorya Shankar Joy</span>
+          <span>Sooryashankar Joy</span>
         </a>
 
-        <nav class="nav" aria-label="Primary">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+        <nav class="nav-desktop" aria-label="Primary">
+          <a href="./" aria-current="page">Home</a>
+          <a href="./projects.html">Projects</a>
+          <a href="./teaching.html">Teaching</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
         </nav>
+
+        <div class="header-actions">
+          <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme" title="Theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M12 18a6 6 0 0 1-6-6c0-2.6 1.7-4.8 4-5.6a7.5 7.5 0 1 0 10.6 10.6c-.8 2.3-3 4-5.6 4Z"
+              />
+            </svg>
+          </button>
+          <button
+            id="navToggle"
+            class="icon-btn hamburger"
+            type="button"
+            aria-label="Open menu"
+            aria-controls="mobileNav"
+            aria-expanded="false"
+            title="Menu"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M4 7h16v2H4V7Zm0 8h16v2H4v-2Zm0-4h16v2H4v-2Z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobileNav" class="mobile-panel" role="dialog" aria-label="Mobile navigation">
+        <div class="container mobile-panel-inner">
+          <a href="./" aria-current="page">Home</a>
+          <a href="./projects.html">Projects</a>
+          <a href="./teaching.html">Teaching</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
+        </div>
       </div>
     </header>
 
     <main id="main" class="main">
       <section class="hero">
-        <div class="container hero-inner">
-          <p class="eyebrow">GitHub Pages starter</p>
-          <h1 class="headline">Hi, I’m <span class="accent">Soorya</span>.</h1>
+        <div class="container">
+          <div class="hero-card">
+            <p class="eyebrow">Engineer • Builder • Teaching Assistant</p>
+            <h1 class="headline">
+              <span class="accent-underline">Sooryashankar Joy</span> <span class="muted">(Soorya)</span>
+            </h1>
+            <p class="tagline">Computer Science @ Purdue University • Embedded Systems • Systems Programming • Hardware–Software Interfaces</p>
+            <p class="subhead">
+              I build close-to-the-metal systems: C programming, microcontrollers, digital logic, circuit design, and performance
+              analysis. I’m an Undergraduate TA for ECE 2k7 (Electrical Engineering Fundamentals Laboratory) and enjoy helping
+              students translate theory into real circuits and measurements.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn primary" href="./projects.html">View Projects</a>
+              <a class="btn" href="./contact.html">Get in Touch</a>
+            </div>
+
+            <div class="now" role="note" aria-label="Now">
+              <strong>Currently:</strong> TA for ECE 2k7 • Building embedded projects • Studying systems &amp; performance
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section compact">
+        <div class="container">
+          <h2 class="title">Highlights</h2>
           <p class="subhead">
-            This is a simple skeleton site to test commits and deployments. Replace this text with your bio, links, and
-            work.
+            Recruiter-friendly snapshot: what I do, the environments I work in, and the kinds of problems I enjoy.
           </p>
 
+          <div class="grid" style="margin-top: 14px">
+            <article class="card span-4">
+              <h3>ECE 2k7 Teaching Assistant</h3>
+              <p>Hands-on lab support: circuits, instrumentation, and debugging habits that scale.</p>
+              <div class="tags" aria-label="Keywords">
+                <span class="tag">Teaching Assistant</span>
+                <span class="tag">Instrumentation</span>
+                <span class="tag">Oscilloscope</span>
+              </div>
+            </article>
+            <article class="card span-4">
+              <h3>Embedded &amp; Firmware</h3>
+              <p>Microcontrollers, PWM/timers, interrupts, and practical hardware–software interfaces.</p>
+              <div class="tags" aria-label="Keywords">
+                <span class="tag">Microcontrollers</span>
+                <span class="tag">Firmware</span>
+                <span class="tag">C</span>
+              </div>
+            </article>
+            <article class="card span-4">
+              <h3>Systems Performance</h3>
+              <p>Careful measurement: profiling, cache behavior, and performance optimization in C.</p>
+              <div class="tags" aria-label="Keywords">
+                <span class="tag">perf</span>
+                <span class="tag">Cache</span>
+                <span class="tag">Debugging</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <section class="section">
+        <div class="container">
+          <h2 class="title">Featured Projects</h2>
+          <p class="subhead muted">Three highlights. See the full list and filters on the Projects page.</p>
+
+          <div class="grid" style="margin-top: 14px">
+            <article class="card span-4">
+              <h3>Motor Control + Quadrature Encoder</h3>
+              <p>Closed-loop speed control with encoder decoding, timers, and careful measurements.</p>
+              <div class="card-actions">
+                <a href="./projects.html#motor-control">Details</a>
+                <a href="./projects.html">All projects</a>
+              </div>
+            </article>
+            <article class="card span-4">
+              <h3>Cache Profiling in C (perf)</h3>
+              <p>Measured cache behavior and improved kernels with data-driven iteration.</p>
+              <div class="card-actions">
+                <a href="./projects.html#perf-c">Details</a>
+                <a href="./projects.html">All projects</a>
+              </div>
+            </article>
+            <article class="card span-4">
+              <h3>Op-Amp + Comparator Signal Conditioning</h3>
+              <p>Analog front-end and clean digital transitions for noisy signals.</p>
+              <div class="card-actions">
+                <a href="./projects.html#signal-conditioning">Details</a>
+                <a href="./projects.html">All projects</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <section class="section">
+        <div class="container">
+          <h2 class="title">Contact</h2>
+          <p class="subhead">
+            If you’re hiring for embedded/systems roles, I’d love to chat. The fastest way is email—also happy to connect on
+            LinkedIn/GitHub.
+          </p>
           <div class="cta-row">
-            <a class="button primary" href="#projects">View projects</a>
-            <a class="button" href="https://github.com/" rel="noreferrer">GitHub</a>
-          </div>
-
-          <div class="meta-row" role="list">
-            <div class="meta" role="listitem">
-              <div class="meta-k">Status</div>
-              <div class="meta-v" id="status">Loading…</div>
-            </div>
-            <div class="meta" role="listitem">
-              <div class="meta-k">Last update</div>
-              <div class="meta-v" id="lastUpdate">—</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="section">
-        <div class="container">
-          <h2>About</h2>
-          <p>
-            Put a short intro here: what you do, what you care about, and what you’re looking for. Keep it friendly and
-            concrete.
-          </p>
-          <ul class="chips" aria-label="Highlights">
-            <li>Software</li>
-            <li>Design</li>
-            <li>Writing</li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="projects" class="section">
-        <div class="container">
-          <div class="section-header">
-            <h2>Projects</h2>
-            <p class="muted">Three cards to start — swap in your real work.</p>
-          </div>
-
-          <div class="grid">
-            <article class="card">
-              <h3>Project One</h3>
-              <p>One sentence about what it is and why it matters.</p>
-              <div class="card-actions">
-                <a href="#" aria-label="Project One link">Link</a>
-                <a href="#" aria-label="Project One source">Source</a>
-              </div>
-            </article>
-            <article class="card">
-              <h3>Project Two</h3>
-              <p>One sentence about what it is and why it matters.</p>
-              <div class="card-actions">
-                <a href="#" aria-label="Project Two link">Link</a>
-                <a href="#" aria-label="Project Two source">Source</a>
-              </div>
-            </article>
-            <article class="card">
-              <h3>Project Three</h3>
-              <p>One sentence about what it is and why it matters.</p>
-              <div class="card-actions">
-                <a href="#" aria-label="Project Three link">Link</a>
-                <a href="#" aria-label="Project Three source">Source</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section">
-        <div class="container">
-          <h2>Contact</h2>
-          <p class="muted">Add your preferred contact method(s) here.</p>
-          <div class="contact-row">
-            <a class="button" href="mailto:you@example.com">Email</a>
-            <a class="button" href="https://www.linkedin.com/" rel="noreferrer">LinkedIn</a>
-            <a class="button" href="https://x.com/" rel="noreferrer">X</a>
+            <a class="btn primary" href="./contact.html">Get in Touch</a>
+            <a class="btn" href="./projects.html">View Projects</a>
           </div>
         </div>
       </section>
@@ -123,11 +209,17 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <span>© <span id="year"></span> Soorya Shankar Joy</span>
-        <span class="muted">Built for GitHub Pages.</span>
+        <span>© <span id="year"></span> Sooryashankar Joy</span>
+        <span>Embedded Systems • Systems Programming • Hardware–Software Interfaces</span>
       </div>
     </footer>
 
-    <script defer src="./assets/js/main.js"></script>
+    <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M12 5l7 7-1.4 1.4L13 8.8V19h-2V8.8L6.4 13.4 5 12l7-7Z" />
+      </svg>
+    </button>
+
+    <script defer src="./assets/main.js"></script>
   </body>
 </html>

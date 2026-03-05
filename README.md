@@ -4,9 +4,15 @@ Minimal starter site for GitHub Pages.
 
 ## What’s in here
 
-- `index.html`: Home page
-- `assets/css/styles.css`: Styling
-- `assets/js/main.js`: Tiny client-side script
+- Pages: `index.html`, `projects.html`, `teaching.html`, `about.html`, `contact.html`, `404.html`
+- Shared assets:
+  - `assets/styles.css`
+  - `assets/main.js`
+  - `assets/favicon.svg`
+  - `assets/og-image.svg`
+- SEO:
+  - `sitemap.xml`
+  - `robots.txt`
 
 ## How to publish on GitHub Pages
 
@@ -20,6 +26,7 @@ Minimal starter site for GitHub Pages.
 
 ## Customize
 
-- Replace the placeholder links/text in `index.html`
-- Update the title/description meta tags
-- Change colors in `assets/css/styles.css` (the `:root` variables)
+- Replace the placeholder links in `contact.html` (Email/LinkedIn/GitHub)
+- Swap project links on `projects.html` (GitHub/Demo buttons)
+- Update SEO copy (titles/descriptions) if needed
+- Change colors in `assets/styles.css` (CSS variables at the top)
