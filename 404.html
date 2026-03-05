@@ -3,23 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>404 — Page not found • Sooryashankar Joy</title>
-    <meta name="description" content="Page not found. Return to Sooryashankar Joy’s homepage." />
+
+    <title>404 — Not found • Sooryashankar Joy</title>
     <meta name="robots" content="noindex" />
-    <meta
-      name="keywords"
-      content="Sooryashankar Joy, Embedded Systems, Systems Programming, Purdue University"
-    />
+    <meta name="description" content="Page not found. Return to Sooryashankar Joy’s homepage." />
     <link rel="canonical" href="https://sooryashankarjoy.github.io/404.html" />
 
-    <meta property="og:title" content="404 — Page not found" />
-    <meta property="og:description" content="This page doesn’t exist. Head back home." />
+    <meta property="og:title" content="404 — Not found" />
+    <meta property="og:description" content="Page not found." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sooryashankarjoy.github.io/404.html" />
     <meta property="og:image" content="https://sooryashankarjoy.github.io/assets/og-image.svg" />
+
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="404 — Page not found" />
-    <meta name="twitter:description" content="This page doesn’t exist. Head back home." />
+    <meta name="twitter:title" content="404 — Not found" />
+    <meta name="twitter:description" content="Page not found." />
     <meta name="twitter:image" content="https://sooryashankarjoy.github.io/assets/og-image.svg" />
 
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
@@ -30,86 +28,40 @@
 
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="./" aria-label="Home">
-          <span class="brand-mark" aria-hidden="true">SJ</span>
-          <span>Sooryashankar Joy</span>
-        </a>
-
-        <nav class="nav-desktop" aria-label="Primary">
+        <nav class="topnav" aria-label="Primary">
           <a href="./">Home</a>
+          <span class="sep" aria-hidden="true">|</span>
           <a href="./projects.html">Projects</a>
+          <span class="sep" aria-hidden="true">|</span>
           <a href="./teaching.html">Teaching</a>
+          <span class="sep" aria-hidden="true">|</span>
+          <a href="./notes.html">Notes</a>
+          <span class="sep" aria-hidden="true">|</span>
           <a href="./about.html">About</a>
+          <span class="sep" aria-hidden="true">|</span>
           <a href="./contact.html">Contact</a>
         </nav>
-
-        <div class="header-actions">
-          <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme" title="Theme">
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                fill="currentColor"
-                d="M12 18a6 6 0 0 1-6-6c0-2.6 1.7-4.8 4-5.6a7.5 7.5 0 1 0 10.6 10.6c-.8 2.3-3 4-5.6 4Z"
-              />
-            </svg>
-          </button>
-          <button
-            id="navToggle"
-            class="icon-btn hamburger"
-            type="button"
-            aria-label="Open menu"
-            aria-controls="mobileNav"
-            aria-expanded="false"
-            title="Menu"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="currentColor" d="M4 7h16v2H4V7Zm0 8h16v2H4v-2Zm0-4h16v2H4v-2Z" />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <div id="mobileNav" class="mobile-panel" role="dialog" aria-label="Mobile navigation">
-        <div class="container mobile-panel-inner">
-          <a href="./">Home</a>
-          <a href="./projects.html">Projects</a>
-          <a href="./teaching.html">Teaching</a>
-          <a href="./about.html">About</a>
-          <a href="./contact.html">Contact</a>
-        </div>
       </div>
     </header>
 
-    <main id="main" class="main">
-      <section class="hero">
-        <div class="container">
-          <div class="hero-card">
-            <p class="eyebrow">404</p>
-            <h1 class="headline">Page not found.</h1>
-            <p class="subhead">
-              The page you’re looking for doesn’t exist (or it moved). If you followed a broken link, I’d appreciate a heads-up.
-            </p>
-            <div class="cta-row">
-              <a class="btn primary" href="./">Go home</a>
-              <a class="btn" href="./contact.html">Report a broken link</a>
-            </div>
-          </div>
-        </div>
-      </section>
+    <main id="main">
+      <div class="container">
+        <section aria-label="Not found">
+          <h1>Not found</h1>
+          <p class="muted">The page you requested does not exist.</p>
+          <p><a href="./">Return to Home</a></p>
+        </section>
+      </div>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
         <span>© <span id="year"></span> Sooryashankar Joy</span>
-        <span>Built for GitHub Pages.</span>
+        <span>404</span>
       </div>
     </footer>
-
-    <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
-      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-        <path fill="currentColor" d="M12 5l7 7-1.4 1.4L13 8.8V19h-2V8.8L6.4 13.4 5 12l7-7Z" />
-      </svg>
-    </button>
 
     <script defer src="./assets/main.js"></script>
   </body>
 </html>
+

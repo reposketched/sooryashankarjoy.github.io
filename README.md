@@ -1,10 +1,10 @@
 # sooryashankarjoy.github.io
 
-Minimal starter site for GitHub Pages.
+Minimal, research-profile personal site for GitHub Pages (vanilla HTML/CSS/JS).
 
 ## What’s in here
 
-- Pages: `index.html`, `projects.html`, `teaching.html`, `about.html`, `contact.html`, `404.html`
+- Pages: `index.html`, `projects.html`, `teaching.html`, `notes.html`, `about.html`, `contact.html`, `404.html`
 - Shared assets:
   - `assets/styles.css`
   - `assets/main.js`
@@ -13,6 +13,8 @@ Minimal starter site for GitHub Pages.
 - SEO:
   - `sitemap.xml`
   - `robots.txt`
+- Resume:
+  - `resume/README.md` (drop your PDF in `resume/Soorya_Joy_Resume.pdf`)
 
 ## How to publish on GitHub Pages
 
@@ -26,7 +28,13 @@ Minimal starter site for GitHub Pages.
 
 ## Customize
 
-- Replace the placeholder links in `contact.html` (Email/LinkedIn/GitHub)
-- Swap project links on `projects.html` (GitHub/Demo buttons)
-- Update SEO copy (titles/descriptions) if needed
-- Change colors in `assets/styles.css` (CSS variables at the top)
+- Replace placeholders:
+  - **GitHub**: `https://github.com/YOUR_GITHUB_USERNAME`
+  - **LinkedIn**: `https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/`
+  - **Email**: `mailto:you@example.com`
+- Upload resume:
+  - Put your PDF at `resume/Soorya_Joy_Resume.pdf` and commit it.
+- Edit content:
+  - `index.html` for homepage sections
+  - `projects.html` for project entries
+  - `notes.html` for lab-notebook style notes

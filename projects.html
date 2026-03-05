@@ -4,31 +4,27 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <title>Projects • Sooryashankar Joy</title>
+    <title>Projects — Sooryashankar Joy</title>
     <meta
       name="description"
-      content="Projects by Sooryashankar Joy: embedded motor control, instrumentation and signal conditioning, C performance analysis with perf, digital logic, and more."
+      content="Projects by Sooryashankar Joy: embedded motor control, signal conditioning circuits, cache performance analysis in C, and digital logic."
     />
-    <meta
-      name="keywords"
-      content="Sooryashankar Joy, Embedded Systems, Systems Programming, C, Microcontrollers, Firmware, Hardware-Software Interface, Circuit Design, Digital Logic, Performance Optimization, perf, Debugging, Instrumentation, Oscilloscope, Purdue University"
-    />
-
     <link rel="canonical" href="https://sooryashankarjoy.github.io/projects.html" />
-    <meta property="og:title" content="Projects • Sooryashankar Joy" />
+
+    <meta property="og:title" content="Projects — Sooryashankar Joy" />
     <meta
       property="og:description"
-      content="Embedded systems, hardware–software interfaces, instrumentation, and performance work — with careful measurement."
+      content="Technical project entries in embedded systems, hardware–software interfaces, instrumentation, and performance."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sooryashankarjoy.github.io/projects.html" />
     <meta property="og:image" content="https://sooryashankarjoy.github.io/assets/og-image.svg" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Projects • Sooryashankar Joy" />
+    <meta name="twitter:title" content="Projects — Sooryashankar Joy" />
     <meta
       name="twitter:description"
-      content="Embedded systems, hardware–software interfaces, instrumentation, and performance work — with careful measurement."
+      content="Technical project entries in embedded systems, hardware–software interfaces, instrumentation, and performance."
     />
     <meta name="twitter:image" content="https://sooryashankarjoy.github.io/assets/og-image.svg" />
 
@@ -40,260 +36,86 @@
 
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="./" aria-label="Home">
-          <span class="brand-mark" aria-hidden="true">SJ</span>
-          <span>Sooryashankar Joy</span>
-        </a>
-
-        <nav class="nav-desktop" aria-label="Primary">
+        <nav class="topnav" aria-label="Primary">
           <a href="./">Home</a>
-          <a href="./projects.html" aria-current="page">Projects</a>
+          <span class="sep" aria-hidden="true">|</span>
+          <a href="./projects.html">Projects</a>
+          <span class="sep" aria-hidden="true">|</span>
           <a href="./teaching.html">Teaching</a>
+          <span class="sep" aria-hidden="true">|</span>
+          <a href="./notes.html">Notes</a>
+          <span class="sep" aria-hidden="true">|</span>
           <a href="./about.html">About</a>
+          <span class="sep" aria-hidden="true">|</span>
           <a href="./contact.html">Contact</a>
         </nav>
-
-        <div class="header-actions">
-          <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme" title="Theme">
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                fill="currentColor"
-                d="M12 18a6 6 0 0 1-6-6c0-2.6 1.7-4.8 4-5.6a7.5 7.5 0 1 0 10.6 10.6c-.8 2.3-3 4-5.6 4Z"
-              />
-            </svg>
-          </button>
-          <button
-            id="navToggle"
-            class="icon-btn hamburger"
-            type="button"
-            aria-label="Open menu"
-            aria-controls="mobileNav"
-            aria-expanded="false"
-            title="Menu"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="currentColor" d="M4 7h16v2H4V7Zm0 8h16v2H4v-2Zm0-4h16v2H4v-2Z" />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <div id="mobileNav" class="mobile-panel" role="dialog" aria-label="Mobile navigation">
-        <div class="container mobile-panel-inner">
-          <a href="./">Home</a>
-          <a href="./projects.html" aria-current="page">Projects</a>
-          <a href="./teaching.html">Teaching</a>
-          <a href="./about.html">About</a>
-          <a href="./contact.html">Contact</a>
-        </div>
       </div>
     </header>
 
-    <main id="main" class="main">
-      <section class="hero">
-        <div class="container">
-          <div class="hero-card">
-            <p class="eyebrow">Projects</p>
-            <h1 class="title">Work I’ve built and measured.</h1>
-            <p class="subhead">
-              I like projects where I can connect theory to behavior you can observe on real hardware—timing, signals, noise,
-              memory, and performance. Many of these are student/personal builds (not company work).
-            </p>
+    <main id="main">
+      <div class="container">
+        <section aria-label="Projects header">
+          <h1>Projects</h1>
+          <p class="muted">
+            I prefer write-ups that read like engineering notes: what I built, what I measured, and what I learned. Links are
+            placeholders you can fill.
+          </p>
+        </section>
 
-            <div class="tags" aria-label="Interests">
-              <span class="tag">Embedded Systems</span>
-              <span class="tag">Systems Programming</span>
-              <span class="tag">Hardware–Software Interface</span>
-              <span class="tag">Instrumentation</span>
-              <span class="tag">Debugging</span>
-            </div>
+        <hr class="rule" />
 
-            <ul id="projectFilters" class="chips" aria-label="Project filters">
-              <li><button class="chip-btn" type="button" data-filter="all" aria-pressed="true">All</button></li>
-              <li><button class="chip-btn" type="button" data-filter="embedded" aria-pressed="false">Embedded</button></li>
-              <li><button class="chip-btn" type="button" data-filter="systems" aria-pressed="false">Systems</button></li>
-              <li><button class="chip-btn" type="button" data-filter="hardware" aria-pressed="false">Hardware</button></li>
-              <li><button class="chip-btn" type="button" data-filter="data" aria-pressed="false">Data</button></li>
-            </ul>
+        <section aria-label="Project list">
+          <div id="motor-control" class="entry">
+            <h2>Motor Control with Quadrature Encoder</h2>
+            <p>Closed-loop motor controller using encoder feedback and PWM modulation.</p>
+            <div class="kv"><strong>Technologies:</strong> C, PWM, microcontroller timers, interrupts, encoder decoding</div>
+            <div class="kv"><strong>GitHub:</strong> <a href="#" rel="noreferrer">link</a></div>
           </div>
-        </div>
-      </section>
 
-      <section class="section">
-        <div class="container">
-          <div id="projectsGrid" class="grid" aria-label="Project list">
-            <article
-              id="motor-control"
-              class="card span-6 project-card"
-              data-categories="embedded,hardware"
-              aria-label="Embedded motor control with quadrature encoder"
-            >
-              <h3>Embedded Motor Control with Quadrature Encoder</h3>
-              <p>Closed-loop speed control using encoder feedback, timers, and careful measurement.</p>
-              <ul>
-                <li>Implemented quadrature decoding using interrupts and timer capture for robust RPM estimation.</li>
-                <li>Tuned a simple PI controller and validated stability/response with step tests.</li>
-                <li>Instrumented latency and jitter paths to understand control loop limits.</li>
-              </ul>
-              <div class="tags" aria-label="Tech stack">
-                <span class="tag">C</span>
-                <span class="tag">Microcontroller</span>
-                <span class="tag">PWM</span>
-                <span class="tag">Timers/Interrupts</span>
-                <span class="tag">Encoder</span>
-              </div>
-              <div class="card-actions">
-                <a href="#" aria-label="GitHub link (placeholder)">GitHub</a>
-                <a href="#" aria-label="Demo link (placeholder)">Demo</a>
-              </div>
-              <div class="meta"><strong>Impact:</strong> In tests, observed tighter speed regulation and reduced steady-state error after tuning.</div>
-            </article>
-
-            <article
-              id="signal-conditioning"
-              class="card span-6 project-card"
-              data-categories="hardware,embedded"
-              aria-label="Op-amp front-end and comparator signal conditioning"
-            >
-              <h3>Signal Conditioning: Op-Amp Front-End + Comparator</h3>
-              <p>Analog front-end for noisy signals with clean digital transitions for microcontroller capture.</p>
-              <ul>
-                <li>Designed an op-amp gain/offset stage and added filtering to manage noise and bandwidth.</li>
-                <li>Used a comparator with hysteresis to produce stable edges under varying input amplitude.</li>
-                <li>Validated behavior on breadboard using oscilloscope measurements and edge timing checks.</li>
-              </ul>
-              <div class="tags" aria-label="Tech stack">
-                <span class="tag">Op-amps</span>
-                <span class="tag">Comparator</span>
-                <span class="tag">Circuit Design</span>
-                <span class="tag">Oscilloscope</span>
-              </div>
-              <div class="card-actions">
-                <a href="#" aria-label="GitHub link (placeholder)">GitHub</a>
-                <a href="#" aria-label="Demo link (placeholder)">Demo</a>
-              </div>
-              <div class="meta"><strong>Impact:</strong> Measured cleaner switching thresholds and fewer false triggers after adding hysteresis.</div>
-            </article>
-
-            <article
-              id="perf-c"
-              class="card span-6 project-card"
-              data-categories="systems"
-              aria-label="Performance analysis in C using perf/cache profiling"
-            >
-              <h3>C Performance Analysis with perf (Cache + Branch Profiling)</h3>
-              <p>Measured performance bottlenecks in matrix-vector kernels and iterated using evidence.</p>
-              <ul>
-                <li>Profiled cache misses and cycles using Linux <span class="mono">perf</span> and hardware counters.</li>
-                <li>Reworked memory access patterns and tested variants (layout, loop order, blocking).</li>
-                <li>Documented trade-offs between readability, portability, and performance.</li>
-              </ul>
-              <div class="tags" aria-label="Tech stack">
-                <span class="tag">C</span>
-                <span class="tag">Linux</span>
-                <span class="tag">perf</span>
-                <span class="tag">Cache Profiling</span>
-              </div>
-              <div class="card-actions">
-                <a href="#" aria-label="GitHub link (placeholder)">GitHub</a>
-                <a href="#" aria-label="Demo link (placeholder)">Demo</a>
-              </div>
-              <div class="meta"><strong>Impact:</strong> In benchmarks, observed fewer cache misses and improved throughput for the best kernel variant.</div>
-            </article>
-
-            <article
-              id="digital-logic"
-              class="card span-6 project-card"
-              data-categories="hardware"
-              aria-label="Digital logic project with 74HCxx and timing"
-            >
-              <h3>Digital Logic Build: 74HCxx Decoder + Timing Verification</h3>
-              <p>Practical digital design with glue logic, decoding, and attention to timing behavior.</p>
-              <ul>
-                <li>Built a small decoder/selection circuit using 74HCxx logic ICs and verified truth tables.</li>
-                <li>Measured propagation delays across stages and reasoned about worst-case timing.</li>
-                <li>Improved robustness by simplifying logic depth and cleaning up signal integrity on breadboard.</li>
-              </ul>
-              <div class="tags" aria-label="Tech stack">
-                <span class="tag">Digital Logic</span>
-                <span class="tag">74HCxx</span>
-                <span class="tag">Breadboard</span>
-                <span class="tag">Timing</span>
-              </div>
-              <div class="card-actions">
-                <a href="#" aria-label="GitHub link (placeholder)">GitHub</a>
-                <a href="#" aria-label="Demo link (placeholder)">Demo</a>
-              </div>
-              <div class="meta"><strong>Impact:</strong> Measured lower end-to-end delay after reducing logic depth in the critical path.</div>
-            </article>
-
-            <article
-              id="water-quality"
-              class="card span-6 project-card"
-              data-categories="data,systems"
-              aria-label="Water-quality time-series analytics"
-            >
-              <h3>Water-Quality Time-Series Analysis (Data)</h3>
-              <p>Exploratory data analysis on sensor-style time-series, focusing on signal behavior and reliability.</p>
-              <ul>
-                <li>Cleaned and summarized time-series data, handling missing segments and noisy measurements.</li>
-                <li>Built simple trend/seasonality views and sanity checks for sensor drift/outliers.</li>
-                <li>Emphasized interpretability and measurement context over flashy models.</li>
-              </ul>
-              <div class="tags" aria-label="Tech stack">
-                <span class="tag">Python</span>
-                <span class="tag">Data Analysis</span>
-                <span class="tag">Time-Series</span>
-              </div>
-              <div class="card-actions">
-                <a href="#" aria-label="GitHub link (placeholder)">GitHub</a>
-                <a href="#" aria-label="Demo link (placeholder)">Demo</a>
-              </div>
-              <div class="meta"><strong>Impact:</strong> Identified anomalies and drift patterns that matched expectations from real-world sensors.</div>
-            </article>
-
-            <article
-              id="this-website"
-              class="card span-6 project-card"
-              data-categories="systems"
-              aria-label="This website (GitHub Pages + SEO)"
-            >
-              <h3>This Website: GitHub Pages + SEO + Accessibility</h3>
-              <p>A fast static site with semantic HTML, a shared design system, and no build tools.</p>
-              <ul>
-                <li>Built 5 pages with consistent navigation, responsive layout, and accessible focus states.</li>
-                <li>Added SEO essentials: canonical, OpenGraph/Twitter cards, sitemap, robots.txt.</li>
-                <li>Kept performance high: minimal JS, no external dependencies, system font stack.</li>
-              </ul>
-              <div class="tags" aria-label="Tech stack">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">Vanilla JS</span>
-                <span class="tag">SEO</span>
-              </div>
-              <div class="card-actions">
-                <a href="#" aria-label="GitHub link (placeholder)">GitHub</a>
-                <a href="#" aria-label="Demo link (placeholder)">Demo</a>
-              </div>
-              <div class="meta"><strong>Impact:</strong> Designed to score well on Lighthouse for performance, accessibility, and SEO (measured locally).</div>
-            </article>
+          <div id="signal-conditioning" class="entry">
+            <h2>Signal Conditioning Circuit</h2>
+            <p>Analog front-end using op-amps and comparators for reliable signal detection.</p>
+            <div class="kv"><strong>Technologies:</strong> op-amps, comparators, hysteresis, instrumentation</div>
+            <div class="kv"><strong>GitHub:</strong> <a href="#" rel="noreferrer">link</a></div>
           </div>
-        </div>
-      </section>
+
+          <div id="cache-performance" class="entry">
+            <h2>Cache Performance Analysis (C + perf)</h2>
+            <p>Analyzed memory access patterns and cache misses in matrix-vector kernels using Linux perf.</p>
+            <div class="kv"><strong>Technologies:</strong> C, Linux, perf, cache profiling</div>
+            <div class="kv"><strong>GitHub:</strong> <a href="#" rel="noreferrer">link</a></div>
+          </div>
+
+          <div id="digital-logic" class="entry">
+            <h2>Digital Logic Build (74HCxx)</h2>
+            <p>Small decoder/selection logic built on breadboard; verified truth tables and timing behavior.</p>
+            <div class="kv"><strong>Technologies:</strong> 74HCxx logic ICs, breadboarding, timing measurement</div>
+            <div class="kv"><strong>GitHub:</strong> <a href="#" rel="noreferrer">link</a></div>
+          </div>
+
+          <div id="water-quality" class="entry">
+            <h2>Water-Quality Time-Series Analysis</h2>
+            <p>Exploratory analysis of sensor-style time-series with attention to drift, anomalies, and measurement context.</p>
+            <div class="kv"><strong>Technologies:</strong> Python, time-series analysis</div>
+            <div class="kv"><strong>GitHub:</strong> <a href="#" rel="noreferrer">link</a></div>
+          </div>
+
+          <div id="this-website" class="entry">
+            <h2>This Website (GitHub Pages)</h2>
+            <p>Static research-profile site: semantic HTML, minimal CSS/JS, and basic SEO (OG, Twitter, sitemap, robots).</p>
+            <div class="kv"><strong>Technologies:</strong> HTML, CSS, minimal JavaScript</div>
+            <div class="kv"><strong>GitHub:</strong> <a href="#" rel="noreferrer">link</a></div>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
         <span>© <span id="year"></span> Sooryashankar Joy</span>
-        <span class="muted">Embedded Systems • Systems Programming • Hardware–Software Interfaces</span>
+        <span>Embedded Systems · Systems Programming · Hardware–Software Interfaces</span>
       </div>
     </footer>
-
-    <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
-      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-        <path fill="currentColor" d="M12 5l7 7-1.4 1.4L13 8.8V19h-2V8.8L6.4 13.4 5 12l7-7Z" />
-      </svg>
-    </button>
 
     <script defer src="./assets/main.js"></script>
   </body>

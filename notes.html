@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Engineering Notes — Sooryashankar Joy</title>
+    <meta
+      name="description"
+      content="Engineering notes by Sooryashankar Joy: cache behavior, op-amp stability, and debugging microcontroller timing."
+    />
+    <link rel="canonical" href="https://sooryashankarjoy.github.io/notes.html" />
+
+    <meta property="og:title" content="Engineering Notes — Sooryashankar Joy" />
+    <meta
+      property="og:description"
+      content="Short lab-notebook style notes: caches, circuits, and timing bugs."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sooryashankarjoy.github.io/notes.html" />
+    <meta property="og:image" content="https://sooryashankarjoy.github.io/assets/og-image.svg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Engineering Notes — Sooryashankar Joy" />
+    <meta name="twitter:description" content="Short lab-notebook style notes: caches, circuits, and timing bugs." />
+    <meta name="twitter:image" content="https://sooryashankarjoy.github.io/assets/og-image.svg" />
+
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <nav class="topnav" aria-label="Primary">
+          <a href="./">Home</a>
+          <span class="sep" aria-hidden="true">|</span>
+          <a href="./projects.html">Projects</a>
+          <span class="sep" aria-hidden="true">|</span>
+          <a href="./teaching.html">Teaching</a>
+          <span class="sep" aria-hidden="true">|</span>
+          <a href="./notes.html">Notes</a>
+          <span class="sep" aria-hidden="true">|</span>
+          <a href="./about.html">About</a>
+          <span class="sep" aria-hidden="true">|</span>
+          <a href="./contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="container">
+        <section aria-label="Notes header">
+          <h1>Engineering Notes</h1>
+          <p class="muted">Short notes that read like a lab notebook: observation → hypothesis → measurement.</p>
+        </section>
+
+        <hr class="rule" />
+
+        <section id="cache-miss-behavior" aria-label="Understanding Cache Miss Behavior">
+          <h2>Understanding Cache Miss Behavior</h2>
+          <p>
+            When performance surprises you, it’s often memory. A small change in access pattern can move a workload from “mostly
+            L1 hits” to “waiting on DRAM”. I use perf counters to stay honest about where time goes.
+          </p>
+          <pre class="terminal">$ perf stat -e cycles,instructions,cache-misses ./kernel_bench</pre>
+          <p class="muted">Key idea: optimize what you can measure; don’t infer cache behavior from intuition alone.</p>
+        </section>
+
+        <section id="opamp-stability" aria-label="Designing Stable Op-Amp Circuits">
+          <h2>Designing Stable Op-Amp Circuits</h2>
+          <p>
+            Stability problems don’t look like “a little noise” — they look like a circuit that becomes its own signal generator.
+            Before changing values randomly, I check the topology, loading, and whether the measurement setup is introducing
+            oscillation.
+          </p>
+          <p class="muted">Checklist: grounding, probe technique, bandwidth limits, and whether the op-amp is being asked to drive a capacitive load.</p>
+        </section>
+
+        <section id="mcu-timing-bugs" aria-label="Debugging Microcontroller Timing Bugs">
+          <h2>Debugging Microcontroller Timing Bugs</h2>
+          <p>
+            Timing bugs are rarely “mystical”. They’re usually one of: an incorrect clock assumption, an interrupt interaction,
+            a race on a shared register, or a measurement artifact. I like to add one tiny piece of instrumentation at a time.
+          </p>
+          <pre class="terminal">GPIO high → ISR entry
+GPIO low  → ISR exit
+scope shows: latency + jitter</pre>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© <span id="year"></span> Sooryashankar Joy</span>
+        <span>Engineering notes</span>
+      </div>
+    </footer>
+
+    <script defer src="./assets/main.js"></script>
+  </body>
+</html>
+

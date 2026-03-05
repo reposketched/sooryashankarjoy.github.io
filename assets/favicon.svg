@@ -1,21 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="SJ favicon">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#2457ff" />
-      <stop offset="1" stop-color="#00a3c4" />
-    </linearGradient>
-  </defs>
-  <rect x="8" y="8" width="112" height="112" rx="28" fill="url(#g)" />
-  <rect x="8" y="8" width="112" height="112" rx="28" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Sooryashankar Joy favicon">
+  <rect x="8" y="8" width="112" height="112" rx="18" fill="#ffffff" />
+  <rect x="8" y="8" width="112" height="112" rx="18" fill="none" stroke="#111111" stroke-width="2" />
   <text
     x="64"
-    y="76"
+    y="80"
     text-anchor="middle"
-    font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
-    font-size="54"
+    font-family="ui-serif, Georgia, serif"
+    font-size="58"
     font-weight="800"
-    fill="rgba(0,0,0,0.82)"
-    letter-spacing="-2"
+    fill="#111111"
+    letter-spacing="-1"
   >
     SJ
   </text>
