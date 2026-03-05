@@ -35,77 +35,275 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-      <div class="container header-inner">
-        <nav class="topnav" aria-label="Primary">
-          <a href="./">Home</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./projects.html">Projects</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./teaching.html">Teaching</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./notes.html">Notes</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./about.html">About</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./contact.html">Contact</a>
-        </nav>
+      <div class="container">
+        <div class="header-bar">
+          <div class="prompt" aria-label="Prompt">sj@purdue:~/projects$<span class="caret" aria-hidden="true">▍</span></div>
+
+          <div style="display: inline-flex; align-items: center; gap: 10px">
+            <nav class="nav" aria-label="Primary">
+              <a data-nav="true" href="./">Home</a>
+              <a data-nav="true" href="./projects.html">Projects</a>
+              <a data-nav="true" href="./teaching.html">Teaching</a>
+              <a data-nav="true" href="./notes.html">Notes</a>
+              <a data-nav="true" href="./about.html">About</a>
+              <a data-nav="true" href="./contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions" aria-label="Header controls">
+              <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme">theme</button>
+              <button
+                id="menuToggle"
+                class="icon-btn hamburger"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+              >
+                menu
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu" aria-label="Mobile navigation">
+          <a data-nav="true" href="./">Home</a>
+          <a data-nav="true" href="./projects.html">Projects</a>
+          <a data-nav="true" href="./teaching.html">Teaching</a>
+          <a data-nav="true" href="./notes.html">Notes</a>
+          <a data-nav="true" href="./about.html">About</a>
+          <a data-nav="true" href="./contact.html">Contact</a>
+        </div>
       </div>
     </header>
 
     <main id="main">
       <div class="container">
         <section aria-label="Projects header">
-          <h1>Projects</h1>
-          <p class="muted">
-            I prefer write-ups that read like engineering notes: what I built, what I measured, and what I learned. Links are
-            placeholders you can fill.
-          </p>
+          <h1 class="mono">Projects</h1>
+
+          <div class="panel" aria-label="ls output">
+            <pre class="term"><span class="promptline">sj@purdue:~/projects$</span> ls
+<a href="#motor-controller">motor-controller/</a>
+<a href="#signal-conditioning">signal-conditioning/</a>
+<a href="#cache-analysis">cache-analysis/</a>
+<a href="#digital-logic">digital-logic/</a>
+<a href="#water-quality-analytics">water-quality-analytics/</a>
+<a href="#this-website">this-website/</a></pre>
+          </div>
+
+          <div id="projectFlags" class="flags" aria-label="Filters">
+            <button class="flag" type="button" data-filter="all" aria-pressed="true">--all</button>
+            <button class="flag" type="button" data-filter="embedded" aria-pressed="false">--embedded</button>
+            <button class="flag" type="button" data-filter="systems" aria-pressed="false">--systems</button>
+            <button class="flag" type="button" data-filter="hardware" aria-pressed="false">--hardware</button>
+            <button class="flag" type="button" data-filter="data" aria-pressed="false">--data</button>
+          </div>
         </section>
 
         <hr class="rule" />
 
         <section aria-label="Project list">
-          <div id="motor-control" class="entry">
-            <h2>Motor Control with Quadrature Encoder</h2>
-            <p>Closed-loop motor controller using encoder feedback and PWM modulation.</p>
-            <div class="kv"><strong>Technologies:</strong> C, PWM, microcontroller timers, interrupts, encoder decoding</div>
-            <div class="kv"><strong>GitHub:</strong> <a href="#" rel="noreferrer">link</a></div>
-          </div>
+          <article
+            id="motor-controller"
+            class="entry"
+            data-categories="embedded,hardware"
+            aria-label="Motor control with quadrature encoder"
+          >
+            <h2>Motor control w/ quadrature encoder</h2>
+            <p>
+              Closed-loop motor controller using quadrature encoder feedback for speed estimation, with PWM drive and interrupt
+              timing constraints.
+            </p>
+            <p>
+              I focused on signal integrity, timer configuration, and building a testable control loop where I could observe
+              jitter and validate step response.
+            </p>
+            <h3>What I did</h3>
+            <ul>
+              <li>Implemented quadrature decoding and RPM estimation using timers/interrupts.</li>
+              <li>Tuned a PI controller using repeatable step tests.</li>
+              <li>Instrumented latency/jitter paths to understand control loop limits.</li>
+            </ul>
+            <div class="tags" aria-label="Tech tags">
+              <span class="tag">C</span>
+              <span class="tag">PWM</span>
+              <span class="tag">timers</span>
+              <span class="tag">interrupts</span>
+              <span class="tag">encoder</span>
+            </div>
+            <p class="muted"><strong>Measured/Observed:</strong> In tests, observed improved speed regulation after tuning.</p>
+            <p>
+              Links:
+              <a href="#" rel="noreferrer">GitHub</a> ·
+              <a href="#" rel="noreferrer">Demo</a>
+            </p>
+          </article>
 
-          <div id="signal-conditioning" class="entry">
-            <h2>Signal Conditioning Circuit</h2>
-            <p>Analog front-end using op-amps and comparators for reliable signal detection.</p>
-            <div class="kv"><strong>Technologies:</strong> op-amps, comparators, hysteresis, instrumentation</div>
-            <div class="kv"><strong>GitHub:</strong> <a href="#" rel="noreferrer">link</a></div>
-          </div>
+          <article
+            id="signal-conditioning"
+            class="entry"
+            data-categories="hardware,embedded"
+            aria-label="Signal conditioning circuit"
+          >
+            <h2>Signal conditioning: op-amp front-end + comparator</h2>
+            <p>
+              Analog front-end to condition a noisy input signal into a clean digital edge stream, including gain/offset and
+              comparator hysteresis.
+            </p>
+            <p>
+              The emphasis was on measurement: probing correctly, validating thresholds, and checking stability under realistic
+              wiring and loading.
+            </p>
+            <h3>What I did</h3>
+            <ul>
+              <li>Designed an op-amp stage (gain/offset) with practical filtering.</li>
+              <li>Added comparator hysteresis to reduce false triggers.</li>
+              <li>Validated waveforms and edge timing with oscilloscope measurements.</li>
+            </ul>
+            <div class="tags" aria-label="Tech tags">
+              <span class="tag">op-amp</span>
+              <span class="tag">comparator</span>
+              <span class="tag">instrumentation</span>
+              <span class="tag">oscilloscope</span>
+            </div>
+            <p class="muted"><strong>Measured/Observed:</strong> Measured fewer spurious transitions after adding hysteresis.</p>
+            <p>
+              Links:
+              <a href="#" rel="noreferrer">GitHub</a> ·
+              <a href="#" rel="noreferrer">Demo</a>
+            </p>
+          </article>
 
-          <div id="cache-performance" class="entry">
-            <h2>Cache Performance Analysis (C + perf)</h2>
-            <p>Analyzed memory access patterns and cache misses in matrix-vector kernels using Linux perf.</p>
-            <div class="kv"><strong>Technologies:</strong> C, Linux, perf, cache profiling</div>
-            <div class="kv"><strong>GitHub:</strong> <a href="#" rel="noreferrer">link</a></div>
-          </div>
+          <article
+            id="cache-analysis"
+            class="entry"
+            data-categories="systems"
+            aria-label="Performance profiling in C"
+          >
+            <h2>Cache performance analysis in C (perf stat)</h2>
+            <p>
+              Benchmarked matrix-vector style kernels and used Linux perf counters to quantify cache misses, cycles, and
+              instruction behavior.
+            </p>
+            <p>
+              The goal was to replace “it feels faster” with repeatable measurements and to understand why a change helped (or
+              didn’t).
+            </p>
+            <h3>What I did</h3>
+            <ul>
+              <li>Collected perf counters (cycles, instructions, cache-misses) across kernel variants.</li>
+              <li>Changed access patterns (layout/loop order) and re-measured systematically.</li>
+              <li>Wrote small scripts to keep runs comparable and reduce noise.</li>
+            </ul>
+            <div class="tags" aria-label="Tech tags">
+              <span class="tag">C</span>
+              <span class="tag">Linux</span>
+              <span class="tag">perf</span>
+              <span class="tag">profiling</span>
+            </div>
+            <p class="muted"><strong>Measured/Observed:</strong> In benchmarks, observed reduced cache-misses for the best variant.</p>
+            <p>
+              Links:
+              <a href="#" rel="noreferrer">GitHub</a> ·
+              <a href="#" rel="noreferrer">Demo</a>
+            </p>
+          </article>
 
-          <div id="digital-logic" class="entry">
-            <h2>Digital Logic Build (74HCxx)</h2>
-            <p>Small decoder/selection logic built on breadboard; verified truth tables and timing behavior.</p>
-            <div class="kv"><strong>Technologies:</strong> 74HCxx logic ICs, breadboarding, timing measurement</div>
-            <div class="kv"><strong>GitHub:</strong> <a href="#" rel="noreferrer">link</a></div>
-          </div>
+          <article
+            id="digital-logic"
+            class="entry"
+            data-categories="hardware"
+            aria-label="Digital logic project"
+          >
+            <h2>Digital logic: 74HCxx / decoder / timing</h2>
+            <p>
+              Built small combinational logic blocks on breadboard (decoder/selection) and verified correctness and propagation
+              timing.
+            </p>
+            <p>
+              I treated it like a timing lab: verify truth tables, then measure delay through stages and reason about worst-case
+              paths.
+            </p>
+            <h3>What I did</h3>
+            <ul>
+              <li>Implemented decoding/selection using 74HCxx ICs.</li>
+              <li>Measured propagation delays and simplified logic depth where possible.</li>
+              <li>Validated signal integrity on breadboard with careful probing.</li>
+            </ul>
+            <div class="tags" aria-label="Tech tags">
+              <span class="tag">74HCxx</span>
+              <span class="tag">timing</span>
+              <span class="tag">breadboard</span>
+              <span class="tag">logic</span>
+            </div>
+            <p class="muted"><strong>Measured/Observed:</strong> Measured lower end-to-end delay after reducing logic depth.</p>
+            <p>
+              Links:
+              <a href="#" rel="noreferrer">GitHub</a> ·
+              <a href="#" rel="noreferrer">Demo</a>
+            </p>
+          </article>
 
-          <div id="water-quality" class="entry">
-            <h2>Water-Quality Time-Series Analysis</h2>
-            <p>Exploratory analysis of sensor-style time-series with attention to drift, anomalies, and measurement context.</p>
-            <div class="kv"><strong>Technologies:</strong> Python, time-series analysis</div>
-            <div class="kv"><strong>GitHub:</strong> <a href="#" rel="noreferrer">link</a></div>
-          </div>
+          <article
+            id="water-quality-analytics"
+            class="entry"
+            data-categories="data"
+            aria-label="Water-quality analytics"
+          >
+            <h2>Water-quality time-series analytics</h2>
+            <p>
+              Secondary interest: exploratory analysis of water-quality time-series with a focus on reliability, sensor drift,
+              missing data, and anomaly detection.
+            </p>
+            <h3>What I did</h3>
+            <ul>
+              <li>Cleaned/normalized time-series and handled missing segments.</li>
+              <li>Built simple diagnostics for drift and outlier behavior.</li>
+              <li>Summarized results with measurement context (not just plots).</li>
+            </ul>
+            <div class="tags" aria-label="Tech tags">
+              <span class="tag">Python</span>
+              <span class="tag">time-series</span>
+              <span class="tag">data analysis</span>
+            </div>
+            <p class="muted"><strong>Measured/Observed:</strong> Observed patterns consistent with real-world sensor noise and drift.</p>
+            <p>
+              Links:
+              <a href="#" rel="noreferrer">GitHub</a> ·
+              <a href="#" rel="noreferrer">Demo</a>
+            </p>
+          </article>
 
-          <div id="this-website" class="entry">
-            <h2>This Website (GitHub Pages)</h2>
-            <p>Static research-profile site: semantic HTML, minimal CSS/JS, and basic SEO (OG, Twitter, sitemap, robots).</p>
-            <div class="kv"><strong>Technologies:</strong> HTML, CSS, minimal JavaScript</div>
-            <div class="kv"><strong>GitHub:</strong> <a href="#" rel="noreferrer">link</a></div>
-          </div>
+          <article
+            id="this-website"
+            class="entry"
+            data-categories="systems"
+            aria-label="This website"
+          >
+            <h2>This website (GitHub Pages + SEO)</h2>
+            <p>
+              Built a terminal-inspired static site with minimal JS, accessible navigation, and basic SEO (OpenGraph/Twitter,
+              sitemap, robots.txt).
+            </p>
+            <h3>What I did</h3>
+            <ul>
+              <li>Designed a terminal-style header/nav that stays readable and professional.</li>
+              <li>Implemented light/dark theme toggle with system default and persistence.</li>
+              <li>Kept structure simple for fast load and reliable GitHub Pages deployment.</li>
+            </ul>
+            <div class="tags" aria-label="Tech tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JS</span>
+              <span class="tag">SEO</span>
+            </div>
+            <p class="muted"><strong>Measured/Observed:</strong> Designed for strong Lighthouse scores (measured locally).</p>
+            <p>
+              Links:
+              <a href="#" rel="noreferrer">GitHub</a> ·
+              <a href="#" rel="noreferrer">Demo</a>
+            </p>
+          </article>
         </section>
       </div>
     </main>
@@ -113,7 +311,7 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <span>© <span id="year"></span> Sooryashankar Joy</span>
-        <span>Embedded Systems · Systems Programming · Hardware–Software Interfaces</span>
+        <span class="muted">Embedded Systems · Systems Programming · Hardware–Software Interfaces</span>
       </div>
     </footer>
 

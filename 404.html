@@ -27,27 +27,55 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-      <div class="container header-inner">
-        <nav class="topnav" aria-label="Primary">
-          <a href="./">Home</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./projects.html">Projects</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./teaching.html">Teaching</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./notes.html">Notes</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./about.html">About</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./contact.html">Contact</a>
-        </nav>
+      <div class="container">
+        <div class="header-bar">
+          <div class="prompt" aria-label="Prompt">sj@purdue:~$<span class="caret" aria-hidden="true">▍</span></div>
+
+          <div style="display: inline-flex; align-items: center; gap: 10px">
+            <nav class="nav" aria-label="Primary">
+              <a data-nav="true" href="./">Home</a>
+              <a data-nav="true" href="./projects.html">Projects</a>
+              <a data-nav="true" href="./teaching.html">Teaching</a>
+              <a data-nav="true" href="./notes.html">Notes</a>
+              <a data-nav="true" href="./about.html">About</a>
+              <a data-nav="true" href="./contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions" aria-label="Header controls">
+              <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme">theme</button>
+              <button
+                id="menuToggle"
+                class="icon-btn hamburger"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+              >
+                menu
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu" aria-label="Mobile navigation">
+          <a data-nav="true" href="./">Home</a>
+          <a data-nav="true" href="./projects.html">Projects</a>
+          <a data-nav="true" href="./teaching.html">Teaching</a>
+          <a data-nav="true" href="./notes.html">Notes</a>
+          <a data-nav="true" href="./about.html">About</a>
+          <a data-nav="true" href="./contact.html">Contact</a>
+        </div>
       </div>
     </header>
 
     <main id="main">
       <div class="container">
         <section aria-label="Not found">
-          <h1>Not found</h1>
+          <h1 class="mono">404</h1>
+          <div class="panel">
+            <pre class="term"><span class="promptline">sj@purdue:~$</span> cd /not-a-real-path
+bash: cd: /not-a-real-path: No such file or directory</pre>
+          </div>
           <p class="muted">The page you requested does not exist.</p>
           <p><a href="./">Return to Home</a></p>
         </section>
@@ -57,7 +85,7 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <span>© <span id="year"></span> Sooryashankar Joy</span>
-        <span>404</span>
+        <span class="muted">404</span>
       </div>
     </footer>
 

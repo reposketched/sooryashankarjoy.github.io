@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <title>Sooryashankar Joy (Soorya) — Systems & Embedded</title>
+    <title>Sooryashankar Joy — Embedded Systems & Systems Programming</title>
     <meta
       name="description"
-      content="Sooryashankar Joy (Soorya) is a Computer Science student at Purdue University focused on embedded systems, systems programming, and hardware–software interfaces."
+      content="Sooryashankar Joy (Soorya) — Computer Science at Purdue University. Embedded Systems, Systems Programming, Hardware–Software Interfaces."
     />
     <link rel="canonical" href="https://sooryashankarjoy.github.io/" />
 
@@ -35,133 +35,86 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-      <div class="container header-inner">
-        <nav class="topnav" aria-label="Primary">
-          <a href="./">Home</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./projects.html">Projects</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./teaching.html">Teaching</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./notes.html">Notes</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./about.html">About</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./contact.html">Contact</a>
-        </nav>
+      <div class="container">
+        <div class="header-bar">
+          <div class="prompt" aria-label="Prompt">sj@purdue:~$<span class="caret" aria-hidden="true">▍</span></div>
+
+          <div style="display: inline-flex; align-items: center; gap: 10px">
+            <nav class="nav" aria-label="Primary">
+              <a data-nav="true" href="./">Home</a>
+              <a data-nav="true" href="./projects.html">Projects</a>
+              <a data-nav="true" href="./teaching.html">Teaching</a>
+              <a data-nav="true" href="./notes.html">Notes</a>
+              <a data-nav="true" href="./about.html">About</a>
+              <a data-nav="true" href="./contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions" aria-label="Header controls">
+              <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme">theme</button>
+              <button
+                id="menuToggle"
+                class="icon-btn hamburger"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+              >
+                menu
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu" aria-label="Mobile navigation">
+          <a data-nav="true" href="./">Home</a>
+          <a data-nav="true" href="./projects.html">Projects</a>
+          <a data-nav="true" href="./teaching.html">Teaching</a>
+          <a data-nav="true" href="./notes.html">Notes</a>
+          <a data-nav="true" href="./about.html">About</a>
+          <a data-nav="true" href="./contact.html">Contact</a>
+        </div>
       </div>
     </header>
 
     <main id="main">
       <div class="container">
         <section aria-label="Hero">
-          <h1>Sooryashankar Joy</h1>
-          <div class="subtitle">
-            <span title="soo-rya SHANG-ker joy">/suːrjəˈʃaŋkər dʒɔɪ/</span>
-          </div>
-          <p class="tagline"><strong>Computer Science — Purdue University</strong></p>
-          <p class="tagline">Embedded Systems · Systems Programming · Hardware–Software Interfaces</p>
-          <p class="muted">Preferred name: <strong>Soorya</strong>.</p>
+          <h1 class="mono">Home</h1>
 
-          <hr class="rule" />
+          <div class="panel" aria-label="Terminal hero block">
+            <pre class="term"><span class="promptline">sj@purdue:~$</span> whoami
+Sooryashankar Joy
+<span title="soo-rya SHANG-ker joy">/suːrjəˈʃaŋkər dʒɔɪ/</span>
+<span class="promptline">sj@purdue:~$</span> focus
+Embedded Systems
+Systems Programming
+Hardware–Software Interfaces</pre>
+          </div>
 
           <p>
             I build close-to-the-metal systems: C programming, microcontrollers, digital logic, circuit design, and performance
-            analysis. I currently serve as an Undergraduate Teaching Assistant for ECE 2k7 (Electrical Engineering Fundamentals
-            Laboratory), helping students translate theory into real circuits and measurements.
+            analysis. I’m an Undergraduate TA for ECE 2k7 (Electrical Engineering Fundamentals Laboratory), helping students
+            translate theory into real circuits and measurements.
           </p>
 
-          <p class="kv">
-            <strong>Links:</strong>
-            <a href="https://github.com/YOUR_GITHUB_USERNAME" rel="noreferrer">GitHub</a>,
-            <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/" rel="noreferrer">LinkedIn</a>,
+          <p class="muted">
+            Preferred name: <strong>Soorya</strong> ·
+            <a href="https://github.com/YOUR_GITHUB_USERNAME" rel="noreferrer">GitHub</a> ·
+            <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/" rel="noreferrer">LinkedIn</a> ·
             <a href="./resume/Soorya_Joy_Resume.pdf">Resume (PDF)</a>
           </p>
-        </section>
 
-        <section aria-label="Currently">
-          <h2>Currently</h2>
-          <ul>
-            <li>Teaching Assistant — ECE 2k7 (Purdue)</li>
-            <li>Building embedded systems projects</li>
-            <li>Studying systems performance and architecture</li>
-            <li>Experimenting with microcontrollers and signal conditioning circuits</li>
-          </ul>
-        </section>
-
-        <hr class="rule" />
-
-        <section aria-label="Terminal">
-          <h2>Terminal</h2>
-          <pre class="terminal">$ whoami
-Sooryashankar Joy
-
-$ interests
-embedded systems
-systems programming
-hardware–software interfaces</pre>
-        </section>
-
-        <section aria-label="Engineering Principles">
-          <h2>Engineering Principles</h2>
-          <ul>
-            <li>Understand the system before optimizing</li>
-            <li>Measure before assuming</li>
-            <li>Prefer simplicity over abstraction</li>
-            <li>Build systems that can be debugged</li>
-          </ul>
-        </section>
-
-        <section aria-label="System Diagram">
-          <h2>One mental model</h2>
-          <pre class="terminal">Encoder → Microcontroller → PWM Driver → Motor</pre>
-        </section>
-
-        <section aria-label="Things I've debugged">
-          <h2>Things I’ve debugged</h2>
-          <ul>
-            <li>unstable op-amp oscillations</li>
-            <li>encoder signal noise</li>
-            <li>cache miss bottlenecks</li>
-            <li>pointer arithmetic bugs</li>
-          </ul>
-        </section>
-
-        <hr class="rule" />
-
-        <section aria-label="Selected projects">
-          <h2>Selected projects</h2>
-
-          <div class="entry">
-            <h3><a href="./projects.html#motor-control">Motor Control with Quadrature Encoder</a></h3>
-            <p>Closed-loop motor controller using encoder feedback and PWM modulation.</p>
-            <div class="kv"><strong>Technologies:</strong> C, microcontroller timers, interrupts</div>
-            <div class="kv"><strong>GitHub:</strong> <a href="#" rel="noreferrer">link</a></div>
+          <div class="panel" style="margin-top: 12px" aria-label="Currently block">
+            <pre class="term"><span class="promptline">sj@purdue:~$</span> now
+• TA — ECE 2k7
+• Building embedded projects
+• Studying systems &amp; performance</pre>
           </div>
 
-          <div class="entry">
-            <h3><a href="./projects.html#signal-conditioning">Signal Conditioning Circuit</a></h3>
-            <p>Analog front-end using op-amps and comparators for signal detection.</p>
-            <div class="kv"><strong>Technologies:</strong> analog circuits, instrumentation</div>
-            <div class="kv"><strong>GitHub:</strong> <a href="#" rel="noreferrer">link</a></div>
+          <div class="cta-row" aria-label="Calls to action">
+            <a class="cmd-btn primary" href="./projects.html">[ view projects ]</a>
+            <a class="cmd-btn" href="./contact.html">[ contact ]</a>
           </div>
-
-          <div class="entry">
-            <h3><a href="./projects.html#cache-performance">Cache Performance Analysis</a></h3>
-            <p>Analyzed memory access patterns and cache misses using Linux perf.</p>
-            <div class="kv"><strong>Technologies:</strong> C, Linux, performance profiling</div>
-            <div class="kv"><strong>GitHub:</strong> <a href="#" rel="noreferrer">link</a></div>
-          </div>
-        </section>
-
-        <section aria-label="Engineering notes">
-          <h2>Engineering notes</h2>
-          <p class="muted">Short lab-notebook style write-ups.</p>
-          <ul>
-            <li><a href="./notes.html#cache-miss-behavior">Understanding Cache Miss Behavior</a></li>
-            <li><a href="./notes.html#opamp-stability">Designing Stable Op-Amp Circuits</a></li>
-            <li><a href="./notes.html#mcu-timing-bugs">Debugging Microcontroller Timing Bugs</a></li>
-          </ul>
         </section>
       </div>
     </main>
@@ -169,7 +122,7 @@ hardware–software interfaces</pre>
     <footer class="site-footer">
       <div class="container footer-inner">
         <span>© <span id="year"></span> Sooryashankar Joy</span>
-        <span>Computer Science @ Purdue University</span>
+        <span class="muted">Computer Science @ Purdue University</span>
       </div>
     </footer>
 

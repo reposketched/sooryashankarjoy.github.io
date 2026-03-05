@@ -35,30 +35,52 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-      <div class="container header-inner">
-        <nav class="topnav" aria-label="Primary">
-          <a href="./">Home</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./projects.html">Projects</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./teaching.html">Teaching</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./notes.html">Notes</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./about.html">About</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./contact.html">Contact</a>
-        </nav>
+      <div class="container">
+        <div class="header-bar">
+          <div class="prompt" aria-label="Prompt">sj@purdue:~/about$<span class="caret" aria-hidden="true">▍</span></div>
+
+          <div style="display: inline-flex; align-items: center; gap: 10px">
+            <nav class="nav" aria-label="Primary">
+              <a data-nav="true" href="./">Home</a>
+              <a data-nav="true" href="./projects.html">Projects</a>
+              <a data-nav="true" href="./teaching.html">Teaching</a>
+              <a data-nav="true" href="./notes.html">Notes</a>
+              <a data-nav="true" href="./about.html">About</a>
+              <a data-nav="true" href="./contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions" aria-label="Header controls">
+              <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme">theme</button>
+              <button
+                id="menuToggle"
+                class="icon-btn hamburger"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+              >
+                menu
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu" aria-label="Mobile navigation">
+          <a data-nav="true" href="./">Home</a>
+          <a data-nav="true" href="./projects.html">Projects</a>
+          <a data-nav="true" href="./teaching.html">Teaching</a>
+          <a data-nav="true" href="./notes.html">Notes</a>
+          <a data-nav="true" href="./about.html">About</a>
+          <a data-nav="true" href="./contact.html">Contact</a>
+        </div>
       </div>
     </header>
 
     <main id="main">
       <div class="container">
         <section aria-label="About header">
-          <h1>About</h1>
-          <p class="muted">
-            Pronunciation: <span class="subtitle" style="display: inline">/suːrjəˈʃaŋkər dʒɔɪ/</span> (preferred: <strong>Soorya</strong>)
-          </p>
+          <h1 class="mono">About</h1>
+          <p class="muted">Preferred name: <strong>Soorya</strong> · <span title="soo-rya SHANG-ker joy">/suːrjəˈʃaŋkər dʒɔɪ/</span></p>
         </section>
 
         <hr class="rule" />
@@ -76,6 +98,31 @@
           </p>
         </section>
 
+        <section aria-label="Skills">
+          <h2>Skills</h2>
+          <h3>Languages</h3>
+          <p class="muted">C, C++, Python</p>
+
+          <h3>Embedded</h3>
+          <p class="muted">microcontrollers, PWM, timers, interrupts, encoder interfacing</p>
+
+          <h3>Hardware</h3>
+          <p class="muted">breadboarding, op-amps, comparators, logic ICs</p>
+
+          <h3>Tools</h3>
+          <p class="muted">Git, Linux, perf, oscilloscope</p>
+        </section>
+
+        <section aria-label="Principles">
+          <h2>Principles</h2>
+          <div class="panel">
+            <pre class="term">measure before assuming
+simplicity over abstraction
+systems that can be debugged
+understand before optimizing</pre>
+          </div>
+        </section>
+
         <section aria-label="Selected keywords">
           <h2>Selected keywords</h2>
           <p class="muted">
@@ -90,7 +137,7 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <span>© <span id="year"></span> Sooryashankar Joy</span>
-        <span>Research-profile style · content-first</span>
+        <span class="muted">Embedded Systems · Systems Programming · Hardware–Software Interfaces</span>
       </div>
     </footer>
 

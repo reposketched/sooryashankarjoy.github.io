@@ -32,61 +32,99 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-      <div class="container header-inner">
-        <nav class="topnav" aria-label="Primary">
-          <a href="./">Home</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./projects.html">Projects</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./teaching.html">Teaching</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./notes.html">Notes</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./about.html">About</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./contact.html">Contact</a>
-        </nav>
+      <div class="container">
+        <div class="header-bar">
+          <div class="prompt" aria-label="Prompt">sj@purdue:~/notes$<span class="caret" aria-hidden="true">▍</span></div>
+
+          <div style="display: inline-flex; align-items: center; gap: 10px">
+            <nav class="nav" aria-label="Primary">
+              <a data-nav="true" href="./">Home</a>
+              <a data-nav="true" href="./projects.html">Projects</a>
+              <a data-nav="true" href="./teaching.html">Teaching</a>
+              <a data-nav="true" href="./notes.html">Notes</a>
+              <a data-nav="true" href="./about.html">About</a>
+              <a data-nav="true" href="./contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions" aria-label="Header controls">
+              <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme">theme</button>
+              <button
+                id="menuToggle"
+                class="icon-btn hamburger"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+              >
+                menu
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu" aria-label="Mobile navigation">
+          <a data-nav="true" href="./">Home</a>
+          <a data-nav="true" href="./projects.html">Projects</a>
+          <a data-nav="true" href="./teaching.html">Teaching</a>
+          <a data-nav="true" href="./notes.html">Notes</a>
+          <a data-nav="true" href="./about.html">About</a>
+          <a data-nav="true" href="./contact.html">Contact</a>
+        </div>
       </div>
     </header>
 
     <main id="main">
       <div class="container">
         <section aria-label="Notes header">
-          <h1>Engineering Notes</h1>
-          <p class="muted">Short notes that read like a lab notebook: observation → hypothesis → measurement.</p>
+          <h1 class="mono">Notes</h1>
+          <p class="muted">Log-style note stubs (single-page anchors; no separate posts required).</p>
+
+          <div class="panel" aria-label="Notes index">
+            <pre class="term"><span class="promptline">sj@purdue:~/notes$</span> tail -n 5 journal.log
+2026-02-18  <a href="#note-cache">Understanding cache miss behavior</a> — A way to reason about misses without hand-waving.
+2026-01-29  <a href="#note-opamp">Designing stable op-amp circuits</a> — A stability checklist I reuse at the bench.
+2025-12-10  <a href="#note-timing">Debugging microcontroller timing bugs</a> — Instrument first; change one variable at a time.
+2025-11-05  <a href="#note-encoder">Cleaning up encoder signals</a> — Noise sources and practical mitigation.
+2025-10-14  <a href="#note-perf">perf stat notes</a> — A small routine to keep measurements comparable.</pre>
+          </div>
         </section>
 
         <hr class="rule" />
 
-        <section id="cache-miss-behavior" aria-label="Understanding Cache Miss Behavior">
-          <h2>Understanding Cache Miss Behavior</h2>
+        <section id="note-cache" aria-label="Understanding cache miss behavior">
+          <h2>Understanding cache miss behavior</h2>
+          <p class="muted">2026-02-18</p>
           <p>
-            When performance surprises you, it’s often memory. A small change in access pattern can move a workload from “mostly
-            L1 hits” to “waiting on DRAM”. I use perf counters to stay honest about where time goes.
+            A reminder to myself: treat caches like systems with constraints (capacity, associativity, locality). Validate your
+            story with counters before optimizing.
           </p>
-          <pre class="terminal">$ perf stat -e cycles,instructions,cache-misses ./kernel_bench</pre>
-          <p class="muted">Key idea: optimize what you can measure; don’t infer cache behavior from intuition alone.</p>
         </section>
 
-        <section id="opamp-stability" aria-label="Designing Stable Op-Amp Circuits">
-          <h2>Designing Stable Op-Amp Circuits</h2>
-          <p>
-            Stability problems don’t look like “a little noise” — they look like a circuit that becomes its own signal generator.
-            Before changing values randomly, I check the topology, loading, and whether the measurement setup is introducing
-            oscillation.
-          </p>
-          <p class="muted">Checklist: grounding, probe technique, bandwidth limits, and whether the op-amp is being asked to drive a capacitive load.</p>
+        <section id="note-opamp" aria-label="Designing stable op-amp circuits">
+          <h2>Designing stable op-amp circuits</h2>
+          <p class="muted">2026-01-29</p>
+          <p>Stability checklist: topology, loading, probe technique, bandwidth, and whether you’re driving capacitance.</p>
         </section>
 
-        <section id="mcu-timing-bugs" aria-label="Debugging Microcontroller Timing Bugs">
-          <h2>Debugging Microcontroller Timing Bugs</h2>
+        <section id="note-timing" aria-label="Debugging microcontroller timing bugs">
+          <h2>Debugging microcontroller timing bugs</h2>
+          <p class="muted">2025-12-10</p>
           <p>
-            Timing bugs are rarely “mystical”. They’re usually one of: an incorrect clock assumption, an interrupt interaction,
-            a race on a shared register, or a measurement artifact. I like to add one tiny piece of instrumentation at a time.
+            Instrument first (GPIO markers, cycle counters). Change one variable at a time. Don’t “fix” three things between
+            measurements.
           </p>
-          <pre class="terminal">GPIO high → ISR entry
-GPIO low  → ISR exit
-scope shows: latency + jitter</pre>
+        </section>
+
+        <section id="note-encoder" aria-label="Cleaning up encoder signals">
+          <h2>Cleaning up encoder signals</h2>
+          <p class="muted">2025-11-05</p>
+          <p>Noise sources: wiring, grounding, thresholds. Mitigation: hysteresis, filtering, careful routing and probing.</p>
+        </section>
+
+        <section id="note-perf" aria-label="perf stat notes">
+          <h2>perf stat notes</h2>
+          <p class="muted">2025-10-14</p>
+          <p>Keep runs comparable: pin frequency where possible, warm up caches, and collect multiple trials.</p>
         </section>
       </div>
     </main>
@@ -94,7 +132,7 @@ scope shows: latency + jitter</pre>
     <footer class="site-footer">
       <div class="container footer-inner">
         <span>© <span id="year"></span> Sooryashankar Joy</span>
-        <span>Engineering notes</span>
+        <span class="muted">Engineering notes</span>
       </div>
     </footer>
 

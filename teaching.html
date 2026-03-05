@@ -35,27 +35,51 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-      <div class="container header-inner">
-        <nav class="topnav" aria-label="Primary">
-          <a href="./">Home</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./projects.html">Projects</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./teaching.html">Teaching</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./notes.html">Notes</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./about.html">About</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="./contact.html">Contact</a>
-        </nav>
+      <div class="container">
+        <div class="header-bar">
+          <div class="prompt" aria-label="Prompt">sj@purdue:~/teaching$<span class="caret" aria-hidden="true">▍</span></div>
+
+          <div style="display: inline-flex; align-items: center; gap: 10px">
+            <nav class="nav" aria-label="Primary">
+              <a data-nav="true" href="./">Home</a>
+              <a data-nav="true" href="./projects.html">Projects</a>
+              <a data-nav="true" href="./teaching.html">Teaching</a>
+              <a data-nav="true" href="./notes.html">Notes</a>
+              <a data-nav="true" href="./about.html">About</a>
+              <a data-nav="true" href="./contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions" aria-label="Header controls">
+              <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme">theme</button>
+              <button
+                id="menuToggle"
+                class="icon-btn hamburger"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+              >
+                menu
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu" aria-label="Mobile navigation">
+          <a data-nav="true" href="./">Home</a>
+          <a data-nav="true" href="./projects.html">Projects</a>
+          <a data-nav="true" href="./teaching.html">Teaching</a>
+          <a data-nav="true" href="./notes.html">Notes</a>
+          <a data-nav="true" href="./about.html">About</a>
+          <a data-nav="true" href="./contact.html">Contact</a>
+        </div>
       </div>
     </header>
 
     <main id="main">
       <div class="container">
         <section aria-label="Teaching header">
-          <h1>Teaching</h1>
+          <h1 class="mono">Teaching</h1>
           <p>
             I’m an Undergraduate Teaching Assistant for ECE 2k7 (Electrical Engineering Fundamentals Laboratory). The work is
             hands-on: building circuits, taking measurements, and debugging when reality disagrees with the schematic.
@@ -83,13 +107,65 @@
             <li>logic ICs</li>
           </ul>
         </section>
+
+        <section aria-label="Debugging loop">
+          <h2>Debugging loop</h2>
+          <div class="panel">
+            <pre class="term">observe → hypothesize → test → iterate</pre>
+          </div>
+        </section>
+
+        <section aria-label="FAQ">
+          <h2>FAQ</h2>
+          <div id="faq" class="accordion">
+            <div class="acc-item">
+              <button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq1">
+                <span>Do you have office hours?</span><span class="muted" aria-hidden="true">+</span>
+              </button>
+              <div id="faq1" class="acc-panel" hidden>
+                Office hours depend on the course schedule. During lab time, I’m available to help; otherwise, check course
+                announcements for TA availability.
+              </div>
+            </div>
+
+            <div class="acc-item">
+              <button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq2">
+                <span>How should I prepare before a lab?</span><span class="muted" aria-hidden="true">+</span>
+              </button>
+              <div id="faq2" class="acc-panel" hidden>
+                Skim the procedure, write down what you expect to measure, and note likely failure modes (wiring, reference
+                points, loading). Preparation turns debugging into a short checklist.
+              </div>
+            </div>
+
+            <div class="acc-item">
+              <button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq3">
+                <span>Any fast debugging tips?</span><span class="muted" aria-hidden="true">+</span>
+              </button>
+              <div id="faq3" class="acc-panel" hidden>
+                Verify power/ground and continuity first. Then isolate one stage at a time. If a waveform looks wrong, confirm
+                probe grounding and reference points before changing the circuit.
+              </div>
+            </div>
+
+            <div class="acc-item">
+              <button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq4">
+                <span>What equipment do we use most?</span><span class="muted" aria-hidden="true">+</span>
+              </button>
+              <div id="faq4" class="acc-panel" hidden>
+                Usually an oscilloscope, multimeter, function generator, power supply, and breadboarded circuits. The key skill
+                is choosing the right measurement for the question.
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
         <span>© <span id="year"></span> Sooryashankar Joy</span>
-        <span>Purdue University · ECE 2k7 · Instrumentation</span>
+        <span class="muted">Purdue University · ECE 2k7 · Instrumentation</span>
       </div>
     </footer>
 
