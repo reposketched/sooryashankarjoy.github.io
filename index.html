@@ -31,15 +31,13 @@
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./assets/styles.css" />
   </head>
-  <body>
+  <body class="page-home">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
       <div class="container">
         <div class="header-bar">
-          <div class="prompt" aria-label="Prompt">
-            <span class="host">sj@purdue</span>:<span class="path">~</span>$<span class="caret" aria-hidden="true">▍</span>
-          </div>
+          <div class="prompt" aria-label="Prompt">sj@purdue:~$</div>
 
           <div style="display: inline-flex; align-items: center; gap: 10px">
             <nav class="nav" aria-label="Primary">
@@ -53,7 +51,7 @@
             </nav>
 
             <div class="header-actions" aria-label="Header controls">
-              <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme">theme</button>
+              <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme" title="Toggle theme"></button>
               <button
                 id="menuToggle"
                 class="icon-btn hamburger"
@@ -61,8 +59,8 @@
                 aria-label="Open menu"
                 aria-expanded="false"
                 aria-controls="mobileMenu"
+                title="Open menu"
               >
-                menu
               </button>
             </div>
           </div>
@@ -82,37 +80,43 @@
 
     <main id="main">
       <div class="container">
-        <section aria-label="Hero">
-          <h1 class="mono">Home</h1>
+        <section aria-label="Home">
+          <h1>Sooryashankar Joy</h1>
+          <div class="muted" style="margin-top: -6px">
+            <span title="soo-rya SHANG-ker joy">/suːrjəˈʃaŋkər dʒɔɪ/</span>
+          </div>
+          <p class="muted" style="margin-top: 6px">
+            Computer Science — Purdue University • Embedded Systems • Systems Programming • Hardware–Software Interfaces
+          </p>
 
-          <div class="panel" aria-label="Terminal hero block">
+          <div class="panel" aria-label="whoami block">
             <pre class="term"><span class="promptline">sj@purdue:~$</span> whoami
 Sooryashankar Joy
-<span title="soo-rya SHANG-ker joy">/suːrjəˈʃaŋkər dʒɔɪ/</span>
 <span class="promptline">sj@purdue:~$</span> focus
 Embedded Systems
 Systems Programming
-Hardware–Software Interfaces</pre>
+Hardware–Software Interfaces
+<span class="promptline">sj@purdue:~$</span><span class="blink-caret" aria-hidden="true">▍</span></pre>
           </div>
 
           <p>
-            I build close-to-the-metal systems: C programming, microcontrollers, digital logic, circuit design, and performance
-            analysis. I’m an Undergraduate TA for ECE 2k7 (Electrical Engineering Fundamentals Laboratory), helping students
-            translate theory into real circuits and measurements.
+            I build close-to-the-metal systems in C, firmware, and performance-critical environments. As an Undergraduate TA
+            for ECE 2k7 (Electrical Engineering Fundamentals Laboratory), I help students translate theory into circuits,
+            measurements, and repeatable debugging.
+          </p>
+          <p>
+            I’m a systems-oriented computer scientist working across embedded hardware, performance engineering, and machine
+            learning.
           </p>
 
           <p class="muted">
-            Preferred name: <strong>Soorya</strong> ·
             <a href="https://github.com/YOUR_GITHUB_USERNAME" rel="noreferrer">GitHub</a> ·
             <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/" rel="noreferrer">LinkedIn</a> ·
             <a href="./resume/Soorya_Joy_Resume.pdf">Resume (PDF)</a>
           </p>
 
-          <div class="panel" style="margin-top: 12px" aria-label="Currently block">
-            <pre class="term"><span class="promptline">sj@purdue:~$</span> now
-• TA — ECE 2k7
-• Building embedded projects
-• Studying systems &amp; performance</pre>
+          <div class="panel" aria-label="now block">
+            <pre class="term"><span class="promptline">sj@purdue:~$</span> now • TA — ECE 2k7 • Building embedded projects • Studying systems &amp; performance</pre>
           </div>
 
           <div class="cta-row" aria-label="Calls to action">
@@ -120,13 +124,37 @@ Hardware–Software Interfaces</pre>
             <a class="cmd-btn" href="./contact.html">[ contact ]</a>
           </div>
         </section>
+
+        <hr class="rule" />
+
+        <section aria-label="Engineering principles">
+          <h2>Engineering Principles</h2>
+          <ul>
+            <li>measure before assuming</li>
+            <li>simplicity over abstraction</li>
+            <li>systems must be debuggable</li>
+            <li>understand before optimizing</li>
+          </ul>
+        </section>
+
+        <hr class="rule" />
+
+        <section aria-label="Project preview">
+          <h2>Project preview</h2>
+          <pre class="term">Encoder → Microcontroller → PWM Driver → Motor</pre>
+          <ul>
+            <li><a href="./projects.html#motor-controller">motor-controller/</a> — encoder feedback + PWM + interrupts</li>
+            <li><a href="./projects.html#cache-analysis">cache-analysis/</a> — perf stat baselines and cache-miss behavior in C</li>
+            <li><a href="./projects.html#signal-conditioning">signal-conditioning/</a> — op-amp front-end + comparator thresholds</li>
+          </ul>
+        </section>
       </div>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <span>© <span id="year"></span> Sooryashankar Joy</span>
-        <span class="muted">Computer Science @ Purdue University</span>
+        <span>Sooryashankar Joy</span>
+        <span class="muted">Computer Science — Purdue University</span>
       </div>
     </footer>
 

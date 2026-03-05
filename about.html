@@ -31,15 +31,13 @@
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./assets/styles.css" />
   </head>
-  <body>
+  <body class="page-about">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
       <div class="container">
         <div class="header-bar">
-          <div class="prompt" aria-label="Prompt">
-            <span class="host">sj@purdue</span>:<span class="path">~/about</span>$<span class="caret" aria-hidden="true">▍</span>
-          </div>
+          <div class="prompt" aria-label="Prompt">sj@purdue:~/about$</div>
 
           <div style="display: inline-flex; align-items: center; gap: 10px">
             <nav class="nav" aria-label="Primary">
@@ -53,7 +51,7 @@
             </nav>
 
             <div class="header-actions" aria-label="Header controls">
-              <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme">theme</button>
+              <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme" title="Toggle theme"></button>
               <button
                 id="menuToggle"
                 class="icon-btn hamburger"
@@ -61,8 +59,8 @@
                 aria-label="Open menu"
                 aria-expanded="false"
                 aria-controls="mobileMenu"
+                title="Open menu"
               >
-                menu
               </button>
             </div>
           </div>
@@ -83,8 +81,7 @@
     <main id="main">
       <div class="container">
         <section aria-label="About header">
-          <h1 class="mono">About</h1>
-          <p class="muted">Preferred name: <strong>Soorya</strong> · <span title="soo-rya SHANG-ker joy">/suːrjəˈʃaŋkər dʒɔɪ/</span></p>
+          <h1>About</h1>
         </section>
 
         <hr class="rule" />
@@ -92,9 +89,9 @@
         <section aria-label="Bio">
           <h2>Bio</h2>
           <p>
-            I build close-to-the-metal systems: C programming, microcontrollers, digital logic, circuit design, and performance
-            analysis. I currently serve as an Undergraduate Teaching Assistant for ECE 2k7 (Electrical Engineering Fundamentals
-            Laboratory), helping students translate theory into real circuits and measurements.
+            I build close-to-the-metal systems in C, firmware, and performance-critical environments. I currently serve as an
+            Undergraduate Teaching Assistant for ECE 2k7 (Electrical Engineering Fundamentals Laboratory), helping students
+            translate theory into circuits, measurements, and repeatable debugging.
           </p>
           <p>
             I’m most interested in the layers beneath abstractions—where timing, memory behavior, and signal integrity determine
@@ -122,7 +119,7 @@
           <div class="panel">
             <pre class="term">measure before assuming
 simplicity over abstraction
-systems that can be debugged
+systems must be debuggable
 understand before optimizing</pre>
           </div>
         </section>
@@ -140,8 +137,8 @@ understand before optimizing</pre>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <span>© <span id="year"></span> Sooryashankar Joy</span>
-        <span class="muted">Embedded Systems · Systems Programming · Hardware–Software Interfaces</span>
+        <span>Sooryashankar Joy</span>
+        <span class="muted">Computer Science — Purdue University</span>
       </div>
     </footer>
 

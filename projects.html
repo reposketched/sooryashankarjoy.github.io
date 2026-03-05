@@ -31,15 +31,13 @@
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./assets/styles.css" />
   </head>
-  <body>
+  <body class="page-projects">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
       <div class="container">
         <div class="header-bar">
-          <div class="prompt" aria-label="Prompt">
-            <span class="host">sj@purdue</span>:<span class="path">~/projects</span>$<span class="caret" aria-hidden="true">▍</span>
-          </div>
+          <div class="prompt" aria-label="Prompt">sj@purdue:~/projects$</div>
 
           <div style="display: inline-flex; align-items: center; gap: 10px">
             <nav class="nav" aria-label="Primary">
@@ -53,7 +51,7 @@
             </nav>
 
             <div class="header-actions" aria-label="Header controls">
-              <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme">theme</button>
+              <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme" title="Toggle theme"></button>
               <button
                 id="menuToggle"
                 class="icon-btn hamburger"
@@ -61,8 +59,8 @@
                 aria-label="Open menu"
                 aria-expanded="false"
                 aria-controls="mobileMenu"
+                title="Open menu"
               >
-                menu
               </button>
             </div>
           </div>
@@ -83,7 +81,7 @@
     <main id="main">
       <div class="container">
         <section aria-label="Projects header">
-          <h1 class="mono">Projects</h1>
+          <h1>Projects</h1>
 
           <div class="panel" aria-label="ls output">
             <pre class="term"><span class="promptline">sj@purdue:~/projects$</span> ls
@@ -314,8 +312,8 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <span>© <span id="year"></span> Sooryashankar Joy</span>
-        <span class="muted">Embedded Systems · Systems Programming · Hardware–Software Interfaces</span>
+        <span>Sooryashankar Joy</span>
+        <span class="muted">Computer Science — Purdue University</span>
       </div>
     </footer>
 

@@ -22,15 +22,13 @@
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./assets/styles.css" />
   </head>
-  <body>
+  <body class="page-blog">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
       <div class="container">
         <div class="header-bar">
-          <div class="prompt" aria-label="Prompt">
-            <span class="host">sj@purdue</span>:<span class="path">~/blog</span>$<span class="caret" aria-hidden="true">▍</span>
-          </div>
+          <div class="prompt" aria-label="Prompt">sj@purdue:~/blog$</div>
 
           <div style="display: inline-flex; align-items: center; gap: 10px">
             <nav class="nav" aria-label="Primary">
@@ -44,10 +42,16 @@
             </nav>
 
             <div class="header-actions" aria-label="Header controls">
-              <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme">theme</button>
-              <button id="menuToggle" class="icon-btn hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-                menu
-              </button>
+              <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme" title="Toggle theme"></button>
+              <button
+                id="menuToggle"
+                class="icon-btn hamburger"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+                title="Open menu"
+              ></button>
             </div>
           </div>
         </div>
@@ -67,7 +71,7 @@
     <main id="main">
       <div class="container">
         <section aria-label="Blog header">
-          <h1 class="mono">Blog</h1>
+          <h1>Blog</h1>
           <p class="muted">Posts are stored as Markdown files under <code>blog/posts/</code>.</p>
 
           <div class="panel" aria-label="Blog command">
@@ -88,8 +92,8 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <span>© <span id="year"></span> Sooryashankar Joy</span>
-        <span class="muted">Blog</span>
+        <span>Sooryashankar Joy</span>
+        <span class="muted">Computer Science — Purdue University</span>
       </div>
     </footer>
 
